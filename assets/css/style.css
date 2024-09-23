@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--Light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: var(--White);
+  padding: 2rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 750px;
+  border-radius: 20px;
+  border-bottom-right-radius: 40%;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem; 
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--Smokey-grey);
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.5rem;
+  border: 2px solid var(--Light-grey);
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--Purple);
+}
+
+.error {
+    color: red; 
+    font-weight: bold;
+}
+
+.error-message {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--Light-red);
+  font-style: italic;
+  margin: 5px 0;
+}
+.hr-line {
+    width: 100%;
+    border-top: 1px solid var(--Light-grey);
+    margin-right: 1rem; 
+  }
+button {
+    padding: 0.75rem;
+    background-color: var(--Purple);
+    color: var(--White);
+    border: none;
+    border-radius: 50%; 
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+button:hover {
+  background-color: var(--Off-black);
+}
+
+.button-container {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    margin-top: 1rem; 
+  }
+
+.result {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.result h1 {
+  font-size: 60px;
+  font-style: italic;
+  color: black; 
+}
+
+.result h1 span {
+  color: var(--Purple);
+}
+
+
+@media only screen and (max-width: 375px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  input {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+
+  .result h1 {
+    font-size: 2rem;
+  }
+
+  .input-container {
+    margin-bottom: 1rem;
+  }
+}
